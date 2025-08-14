@@ -1,13 +1,16 @@
 ---
 title: "Project_Stat184"
 author: "Catherine Galant"
+toc: true
+toc-depth: 2
+toc-title: Contents
 format: pdf
 editor: visual
 ---
 
 # Project Introduction
 
-My goal with this project is to look at how crime in Montgomery County has changed over time. 
+My goal with this project is to look at how crime in Montgomery County has changed over time.
 
 To answer my guiding questions I plan to look at how crime changes over time for a location. My first guiding question is really to help narrow down my scope, by picking out 5-10 of the most prominent offenses in Montgomery County I can take a closer look at they change through the past 9 years.
 
@@ -49,14 +52,13 @@ md_crime<-read.csv("C:\\Users\\catie\\Downloads\\Violent_Crime___Property_Crime_
 
 To get my data into a usable format, I will select only the variables that I need from and filter it so that only cases relevant to my data are observed. For my primary dataset 'Crime.csv' from catalog.Data.gov that has every crime reported from July 1, 2016 to August 2, 2025.
 
-I first separate the data into 2 different sets that I would like to look at, the first is how all crime rates change over the time period, the second is how the most common crimes change over time. To identify the most common crimes I group by the common crime name in Crime.Name2 and summarise the count, arrange in descending order and get the top 9 crimes. 
+I first separate the data into 2 different sets that I would like to look at, the first is how all crime rates change over the time period, the second is how the most common crimes change over time. To identify the most common crimes I group by the common crime name in Crime.Name2 and summarise the count, arrange in descending order and get the top 9 crimes.
 
-### These next steps I do to both dataframes. 
+### These next steps I do to both dataframes.
 
-I only want the start date and time, the specific crime, and the Police District it happened in. I have to convert the start date and time into a POSIXct date time so that I can use it later and I mutate the column to do that. Then I create new columns that store only the year and the month and get rid of the original Start_Date_Time column. Next I filter out all the minor offenses underneath "All Other Offenses" and all the unfinished Police District information, usually written as "OTHER" or left blank. 
+I only want the start date and time, the specific crime, and the Police District it happened in. I have to convert the start date and time into a POSIXct date time so that I can use it later and I mutate the column to do that. Then I create new columns that store only the year and the month and get rid of the original Start_Date_Time column. Next I filter out all the minor offenses underneath "All Other Offenses" and all the unfinished Police District information, usually written as "OTHER" or left blank.
 
-For the first dataframe that looks at all crimes over the months and years, named mont_crime_year_district. To get the summary data I need for graphing, I group it by Year, Month, and Police.District, and then summarize it by count. This gets me my tidied dataframe needed for graphing.
-For the second dataframe, named mont_year_bycrime, that looks at 9 of the top crimes by year, I first filter the data to only have those top 9 crimes, and then I group by year and crime, and summarize again by count. Now this dataframe is also ready to be plotted. Below are the first 5 lines of each dataframe. 
+For the first dataframe that looks at all crimes over the months and years, named mont_crime_year_district. To get the summary data I need for graphing, I group it by Year, Month, and Police.District, and then summarize it by count. This gets me my tidied dataframe needed for graphing. For the second dataframe, named mont_year_bycrime, that looks at 9 of the top crimes by year, I first filter the data to only have those top 9 crimes, and then I group by year and crime, and summarize again by count. Now this dataframe is also ready to be plotted. Below are the first 5 lines of each dataframe.
 
 ```{r}
 #| echo: false
@@ -94,7 +96,12 @@ output_mont_ybc%>%
   kable_classic(full_width = F, html_font = "Cambria")
 
 ```
-For my secondary dataset, it has the total number of the crimes it looks at as individual columns, so I need to pivot the dataframe to be longer and make a new column that has what crime was committed. After exploratory data analysis I discovered that the number of crimes for murder and rape where much lower than the others and observing the trend for them would be difficult if plotted on the same graph, so I separated them into 2 dataframes for viewing. 
+
+For my secondary dataset, it has the total number of the crimes it looks at as individual columns, so I need to pivot the dataframe to be longer and make a new column that has what crime was committed.
+
+After exploratory data analysis I discovered that the number of crimes for murder and rape where much lower than the others and observing the trend for them would be difficult if plotted on the same graph, so I separated them into 2 dataframes for plotting. The first dataframe is md_crime_high for high volume crimes. These crimes are Robbery, Aggravated Assault, Breaking & Entering, and Motor Vehicle Theft. The second dataframe is md_crime_low for low volume crimes, Murder and Rape. 
+
+After using select to separate the data
 
 ```{r}
 #| echo: false
@@ -121,12 +128,12 @@ md_crime_low[1:5,]%>%
   kable_classic(full_width = F, html_font = "Cambria")
 ```
 
-## Data Visualization
+# Data Visualization
 
-```{r}
+```{r, fig.width=8, fig.height=6}
 #| echo: false 
 #| warning: false
-p_year_district<-ggplot(data=mont_crime_year_district,mapping = aes(x=Month,y=Count,colour = Year))+geom_point()+facet_wrap(vars(`Police District`))+theme_bw()+theme(axis.text.x = element_text(angle=60))+labs(title='Montgomery County Total Crimes per Month by Year')
+p_year_district<-ggplot(data=mont_crime_year_district,mapping = aes(x=Month,y=Count,colour = Year))+geom_point()+facet_wrap(vars(`Police District`))+theme_bw()+theme(axis.text.x = element_text(angle=60,hjust=1))+labs(title='Montgomery County Total Crimes per Month by Year')
 p_year_district
 
 p_year_crime<-ggplot(data=mont_year_bycrime,mapping = aes(x=Year,y=Count))+geom_point(mapping = aes(x=Year,y=Count))+facet_wrap(vars(Crime))+theme_bw()+theme(axis.text.x = element_text(angle=60,hjust=1))+labs(title='Montgomery County Top Crimes by Year')
@@ -142,11 +149,9 @@ low_crime
 
 ```
 
-
 ## Code Appendix
 
 ```{r codeAppend, ref.label=knitr::all_labels(), echo=TRUE, eval=FALSE}
 
 
 ```
-
