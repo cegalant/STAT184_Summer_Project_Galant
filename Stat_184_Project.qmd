@@ -5,6 +5,7 @@ author: "Catherine Galant"
 toc: true
 toc-depth: 2
 toc-title: Contents
+bibliography: project.bib
 format: 
   pdf:
     mainfont: "Times New Roman"
@@ -22,7 +23,7 @@ I plan to facet out the data by crime and/or city and look at how it changes by 
 
 ## Primary Dataset
 
-My primary datasets is from catalog.Data.gov and is public crime data from Montgomery County, MD that catalogs every crime reported in the county from July 1 2016 to Aug 2 2025. It has 38 variables detailing the specifics of the crime like the exact time, location, charge, victims, location, etc.
+My primary datasets is from catalog.Data.gov[@Crime] and is public crime data from Montgomery County, MD that catalogs every crime reported in the county from July 1 2016 to Aug 2 2025. It has 38 variables detailing the specifics of the crime like the exact time, location, charge, victims, location, etc.
 
 This dataset is useful for my guiding questions because it gives specific location, crime, and time data. It will tell me exactly what crime was committed, divided into categories 3 times so to specify the exact incindent. It also includes multiple different location categories, like the exact address, city, and police district.
 
@@ -41,7 +42,7 @@ mont_crime <- read.csv("C:\\Users\\catie\\Downloads\\Crime.csv")
 
 ## Secondary Dataset
 
-My secondary dataset is from opendata.Maryland.gov, it includes a tally of violent crimes committed every year from 1975 to 2022 broken up by counties in Maryland. It also gives the percent change of each crime by year, the population of the county, and the crime rate per 100,000 people for each violent crime.
+My secondary dataset is from opendata.Maryland.gov[@Violent], it includes a tally of violent crimes committed every year from 1975 to 2022 broken up by counties in Maryland. It also gives the percent change of each crime by year, the population of the county, and the crime rate per 100,000 people for each violent crime.
 
 This dataset is important for my guiding questions because it will help compare how Montgomery County compares to it's surrounding counties in terms of crime rates.
 
@@ -218,6 +219,12 @@ low_crime
 ```
 
 \newpage
+
+## References
+
+::: {#refs}
+:::
+
 
 ## Code Appendix
 
