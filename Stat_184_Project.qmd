@@ -10,16 +10,14 @@ format:
   pdf:
     mainfont: "Times New Roman"
     sansfont: "Times New Roman"
+    margin-top: 1cm
+    margin-bottom: 1cm
 editor: visual
 ---
 
 # Project Introduction
 
 My goal with this project is to look at how crime in Montgomery County has changed over time. I want to see how crime amount has changed specifically in Montgomery County over the last 10 years, and then take a wider look and see how it has changed over a longer span of time. My second objective is to see how the Montgomery County crime amounts compare to other large surrounding counties. 
-
-To answer my guiding questions I plan to look at how crime changes over time for a location. My first guiding question is really to help narrow down my scope, by picking out 5-10 of the most prominent offenses in Montgomery County I can take a closer look at they change through the past 9 years.
-
-I plan to facet out the data by crime and/or city and look at how it changes by month/year by plotting the total number of crimes.
 
 ## Primary Dataset
 
@@ -169,9 +167,19 @@ md_crime_low[1:5,] %>%
   kable_classic(full_width = F, html_font = "Cambria")
 ```
 
+\pagebreak
+
 # Data Visualization
 
-```{r, fig.width=8, fig.height=6}
+With our new dataframes, viewing the crime trends is much easier. In @fig-plots-1 we can see how the total crime changes over the past 9-10 years throughout each of the police districts in Montgomery County. Each district has different amounts of crime, with more in Montgomery Village, Silver Spring, and Wheaton with less crime elsewhere, although throughout the year every location follows a similar trend line with identical dips and peaks. 
+
+@fig-plots-2 shows us how the top 9 crimes have changed over the years, with very different changes in the crimes being committed. Drug and Narcotic violations as well as DUI's have decreased over the years, while stealing violations have only increased dramatically. In terms of safety measures this is much better because stealing is not a violent crime and has less victims but it raises questions of why this could happen. 
+
+Looking at how crime in Montgomery County has changed over a long period of time and compares to other large counties, we look at @fig-plots-3 and @fig-plots-4. The other counties I chose to look at were Frederick, Baltimore, Anne Arundel, and Prince George's. These are all close by counties in Maryland to Montgomery County and also large population counties. In @fig-plots-3 we can see many interesting trends, like a large decrease in crime from the 70-80's to the 2000-2010's, as well as a major increase in Motor Vehicle Theft in Prince George's county that goes against trend for all other crimes and counties. We can see where more of a specific crime happens, such as the increased amount of Breaking & Entering in Baltimore and PG County. 
+
+In @fig-plots-4 we can see the trend for more violent crimes, in much lower quantity but with some comparable trends. Unlike the other crimes, murder has actually increased since the 70's for Maryland counties and rape switches depending on the county whether it has generally gone up or down. In Montgomery County it has increased significantly in the last 10 years, while it has gone noticeably down in Baltimore City. 
+
+```{r, fig.width=8,fig.height=4.5}
 #| echo: false 
 #| warning: false
 #| label: fig-plots
@@ -218,7 +226,9 @@ low_crime
 
 ```
 
-\newpage
+
+
+\pagebreak
 
 ## References
 
