@@ -1,16 +1,20 @@
 ---
-title: "Project_Stat184"
+title: "A Look at Montgomery County, MD
+Crime over Multiple Time Periods"
 author: "Catherine Galant"
 toc: true
 toc-depth: 2
 toc-title: Contents
-format: pdf
+format: 
+  pdf:
+    mainfont: "Times New Roman"
+    sansfont: "Times New Roman"
 editor: visual
 ---
 
 # Project Introduction
 
-My goal with this project is to look at how crime in Montgomery County has changed over time.
+My goal with this project is to look at how crime in Montgomery County has changed over time. I want to see how crime amount has changed specifically in Montgomery County over the last 10 years, and then take a wider look and see how it has changed over a longer span of time. My second objective is to see how the Montgomery County crime amounts compare to other large surrounding counties. 
 
 To answer my guiding questions I plan to look at how crime changes over time for a location. My first guiding question is really to help narrow down my scope, by picking out 5-10 of the most prominent offenses in Montgomery County I can take a closer look at they change through the past 9 years.
 
@@ -60,14 +64,14 @@ I only want the start date and time, the specific crime, and the Police District
 
 For the first dataframe that looks at all crimes over the months and years, named mont_crime_year_district. To get the summary data I need for graphing, I group it by Year, Month, and Police.District, and then summarize it by count. This gets me my tidied dataframe needed for graphing. For the second dataframe, named mont_year_bycrime, that looks at 9 of the top crimes by year, I first filter the data to only have those top 9 crimes, and then I group by year and crime, and summarize again by count. Now this dataframe is also ready to be plotted.
 
-Below are the first 5 lines of each dataframe.
+Below are the first 6 lines of each dataframe.
 
 ```{r}
 #| echo: false
 #| warning: false
+
 mont_crime <- mont_crime%>%
   select(Start_Date_Time,Crime.Name2,Police.District.Name)
-
 
 mont_crime_year_district <- mont_crime %>%
   mutate(Start_Date_Time = as.POSIXct(Start_Date_Time, format = "%m/%d/%Y %H:%M:%S %p")) %>%
@@ -84,13 +88,12 @@ mont_crime_year_district <- mont_crime %>%
 colnames(mont_crime_year_district) <- c('Year', 'Month', 'Police District','Count')
 mont_crime_year_district <- na.omit(mont_crime_year_district)
 
-
-
 top9_crimes <- (mont_crime %>%
                   group_by(Crime.Name2) %>%
                   summarise(count = n()) %>%
                   filter(Crime.Name2 != 'All Other Offenses') %>%
                   arrange(desc(count)))$Crime.Name2[1:10]
+
 mont_year_bycrime <- mont_crime %>%
   mutate(Start_Date_Time = as.POSIXct(Start_Date_Time,format = "%m/%d/%Y %H:%M:%S %p")) %>%
   mutate(Year = format(Start_Date_Time, format = '%Y')) %>%
@@ -104,16 +107,24 @@ mont_year_bycrime <- mont_crime %>%
   arrange(desc(num))
 mont_year_bycrime <- na.omit(mont_year_bycrime)
 colnames(mont_year_bycrime) <- c('Year', 'Crime', 'Count')
+```
 
-output_mont_cyd <- mont_crime_year_district[1:5,]
-output_mont_cyd %>%
-  kbl(caption = "Montgomery County Crime by Police District/Year") %>%
-  kable_classic(full_width = F, html_font = "Cambria")
+```{r}
+#| echo: false
+#| warning: false
+#| label: tbl-crime1
+#| tbl-cap: "Montgomery County Crime by Police District/Year"
 
-output_mont_ybc <- mont_year_bycrime[1:5,]
-output_mont_ybc %>%
-  kbl(caption = "Montgomery County Top Crimes by Year") %>%
-  kable_classic(full_width = F, html_font = "Cambria")
+kable(head(mont_crime_year_district))
+```
+
+```{r}
+#| echo: false
+#| warning: false
+#| label: tbl-crime2
+#| tbl-cap: "Montgomery County Top Crimes by Year"
+
+kable(head(mont_year_bycrime))
 
 ```
 
@@ -162,6 +173,7 @@ md_crime_low[1:5,] %>%
 ```{r, fig.width=8, fig.height=6}
 #| echo: false 
 #| warning: false
+#| label: fig-plots
 p_year_district <- ggplot(data = mont_crime_year_district, mapping = aes(x = Month, y = Count, colour = Year)) +
   geom_point() +
   facet_wrap(vars(`Police District`)) +
@@ -204,6 +216,8 @@ high_crime
 low_crime
 
 ```
+
+\newpage
 
 ## Code Appendix
 
