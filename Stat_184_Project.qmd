@@ -91,7 +91,7 @@ top9_crimes <- (mont_crime %>%
                   group_by(Crime.Name2) %>%
                   summarise(count = n()) %>%
                   filter(Crime.Name2 != 'All Other Offenses') %>%
-                  arrange(desc(count)))$Crime.Name2[1:10]
+                  arrange(desc(count)))$Crime.Name2[1:9]
 
 mont_year_bycrime <- mont_crime %>%
   mutate(Start_Date_Time = as.POSIXct(Start_Date_Time,format = "%m/%d/%Y %H:%M:%S %p")) %>%
