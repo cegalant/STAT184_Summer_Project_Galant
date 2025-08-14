@@ -1,0 +1,553 @@
+"","JURISDICTION","YEAR","CRIME","NUMBER"
+"1","Anne Arundel County",1975,"MURDER",16
+"2","Anne Arundel County",1975,"RAPE",74
+"3","Anne Arundel County",1976,"MURDER",10
+"4","Anne Arundel County",1976,"RAPE",77
+"5","Anne Arundel County",1977,"MURDER",16
+"6","Anne Arundel County",1977,"RAPE",118
+"7","Anne Arundel County",1978,"MURDER",17
+"8","Anne Arundel County",1978,"RAPE",68
+"9","Anne Arundel County",1979,"MURDER",13
+"10","Anne Arundel County",1979,"RAPE",84
+"11","Anne Arundel County",1980,"MURDER",20
+"12","Anne Arundel County",1980,"RAPE",117
+"13","Anne Arundel County",1981,"MURDER",23
+"14","Anne Arundel County",1981,"RAPE",85
+"15","Anne Arundel County",1982,"MURDER",19
+"16","Anne Arundel County",1982,"RAPE",83
+"17","Anne Arundel County",1983,"MURDER",13
+"18","Anne Arundel County",1983,"RAPE",71
+"19","Anne Arundel County",1984,"MURDER",16
+"20","Anne Arundel County",1984,"RAPE",97
+"21","Anne Arundel County",1985,"MURDER",16
+"22","Anne Arundel County",1985,"RAPE",113
+"23","Anne Arundel County",1986,"MURDER",20
+"24","Anne Arundel County",1986,"RAPE",133
+"25","Anne Arundel County",1987,"MURDER",19
+"26","Anne Arundel County",1987,"RAPE",115
+"27","Anne Arundel County",1988,"MURDER",18
+"28","Anne Arundel County",1988,"RAPE",83
+"29","Anne Arundel County",1989,"MURDER",20
+"30","Anne Arundel County",1989,"RAPE",124
+"31","Anne Arundel County",1990,"MURDER",16
+"32","Anne Arundel County",1990,"RAPE",131
+"33","Anne Arundel County",1991,"MURDER",12
+"34","Anne Arundel County",1991,"RAPE",126
+"35","Anne Arundel County",1992,"MURDER",12
+"36","Anne Arundel County",1992,"RAPE",136
+"37","Anne Arundel County",1993,"MURDER",22
+"38","Anne Arundel County",1993,"RAPE",141
+"39","Anne Arundel County",1994,"MURDER",11
+"40","Anne Arundel County",1994,"RAPE",132
+"41","Anne Arundel County",1995,"MURDER",17
+"42","Anne Arundel County",1995,"RAPE",111
+"43","Anne Arundel County",1996,"MURDER",16
+"44","Anne Arundel County",1996,"RAPE",86
+"45","Anne Arundel County",1997,"MURDER",12
+"46","Anne Arundel County",1997,"RAPE",90
+"47","Anne Arundel County",1998,"MURDER",7
+"48","Anne Arundel County",1998,"RAPE",117
+"49","Anne Arundel County",1999,"MURDER",7
+"50","Anne Arundel County",1999,"RAPE",117
+"51","Anne Arundel County",2000,"MURDER",11
+"52","Anne Arundel County",2000,"RAPE",117
+"53","Anne Arundel County",2001,"MURDER",11
+"54","Anne Arundel County",2001,"RAPE",119
+"55","Anne Arundel County",2002,"MURDER",17
+"56","Anne Arundel County",2002,"RAPE",94
+"57","Anne Arundel County",2003,"MURDER",24
+"58","Anne Arundel County",2003,"RAPE",93
+"59","Anne Arundel County",2004,"MURDER",16
+"60","Anne Arundel County",2004,"RAPE",110
+"61","Anne Arundel County",2005,"MURDER",16
+"62","Anne Arundel County",2005,"RAPE",88
+"63","Anne Arundel County",2006,"MURDER",23
+"64","Anne Arundel County",2006,"RAPE",110
+"65","Anne Arundel County",2007,"MURDER",20
+"66","Anne Arundel County",2007,"RAPE",90
+"67","Anne Arundel County",2008,"MURDER",18
+"68","Anne Arundel County",2008,"RAPE",109
+"69","Anne Arundel County",2009,"MURDER",16
+"70","Anne Arundel County",2009,"RAPE",95
+"71","Anne Arundel County",2010,"MURDER",18
+"72","Anne Arundel County",2010,"RAPE",113
+"73","Anne Arundel County",2011,"MURDER",15
+"74","Anne Arundel County",2011,"RAPE",91
+"75","Anne Arundel County",2012,"MURDER",13
+"76","Anne Arundel County",2012,"RAPE",100
+"77","Anne Arundel County",2013,"MURDER",15
+"78","Anne Arundel County",2013,"RAPE",71
+"79","Anne Arundel County",2014,"MURDER",14
+"80","Anne Arundel County",2014,"RAPE",92
+"81","Anne Arundel County",2015,"MURDER",17
+"82","Anne Arundel County",2015,"RAPE",140
+"83","Anne Arundel County",2016,"MURDER",25
+"84","Anne Arundel County",2016,"RAPE",154
+"85","Anne Arundel County",2017,"MURDER",21
+"86","Anne Arundel County",2017,"RAPE",172
+"87","Anne Arundel County",2018,"MURDER",25
+"88","Anne Arundel County",2018,"RAPE",168
+"89","Anne Arundel County",2019,"MURDER",20
+"90","Anne Arundel County",2019,"RAPE",159
+"91","Anne Arundel County",2020,"MURDER",26
+"92","Anne Arundel County",2020,"RAPE",148
+"93","Baltimore City",1975,"MURDER",259
+"94","Baltimore City",1975,"RAPE",463
+"95","Baltimore City",1976,"MURDER",200
+"96","Baltimore City",1976,"RAPE",460
+"97","Baltimore City",1977,"MURDER",171
+"98","Baltimore City",1977,"RAPE",499
+"99","Baltimore City",1978,"MURDER",199
+"100","Baltimore City",1978,"RAPE",554
+"101","Baltimore City",1979,"MURDER",245
+"102","Baltimore City",1979,"RAPE",565
+"103","Baltimore City",1980,"MURDER",216
+"104","Baltimore City",1980,"RAPE",566
+"105","Baltimore City",1981,"MURDER",228
+"106","Baltimore City",1981,"RAPE",566
+"107","Baltimore City",1982,"MURDER",227
+"108","Baltimore City",1982,"RAPE",553
+"109","Baltimore City",1983,"MURDER",201
+"110","Baltimore City",1983,"RAPE",500
+"111","Baltimore City",1984,"MURDER",215
+"112","Baltimore City",1984,"RAPE",566
+"113","Baltimore City",1985,"MURDER",213
+"114","Baltimore City",1985,"RAPE",594
+"115","Baltimore City",1986,"MURDER",240
+"116","Baltimore City",1986,"RAPE",660
+"117","Baltimore City",1987,"MURDER",226
+"118","Baltimore City",1987,"RAPE",595
+"119","Baltimore City",1988,"MURDER",237
+"120","Baltimore City",1988,"RAPE",519
+"121","Baltimore City",1989,"MURDER",259
+"122","Baltimore City",1989,"RAPE",543
+"123","Baltimore City",1990,"MURDER",305
+"124","Baltimore City",1990,"RAPE",691
+"125","Baltimore City",1991,"MURDER",304
+"126","Baltimore City",1991,"RAPE",702
+"127","Baltimore City",1992,"MURDER",335
+"128","Baltimore City",1992,"RAPE",754
+"129","Baltimore City",1993,"MURDER",353
+"130","Baltimore City",1993,"RAPE",668
+"131","Baltimore City",1994,"MURDER",321
+"132","Baltimore City",1994,"RAPE",639
+"133","Baltimore City",1995,"MURDER",325
+"134","Baltimore City",1995,"RAPE",684
+"135","Baltimore City",1996,"MURDER",333
+"136","Baltimore City",1996,"RAPE",643
+"137","Baltimore City",1997,"MURDER",313
+"138","Baltimore City",1997,"RAPE",480
+"139","Baltimore City",1998,"MURDER",315
+"140","Baltimore City",1998,"RAPE",470
+"141","Baltimore City",1999,"MURDER",305
+"142","Baltimore City",1999,"RAPE",374
+"143","Baltimore City",2000,"MURDER",261
+"144","Baltimore City",2000,"RAPE",366
+"145","Baltimore City",2001,"MURDER",256
+"146","Baltimore City",2001,"RAPE",299
+"147","Baltimore City",2002,"MURDER",253
+"148","Baltimore City",2002,"RAPE",179
+"149","Baltimore City",2003,"MURDER",270
+"150","Baltimore City",2003,"RAPE",208
+"151","Baltimore City",2004,"MURDER",276
+"152","Baltimore City",2004,"RAPE",182
+"153","Baltimore City",2005,"MURDER",269
+"154","Baltimore City",2005,"RAPE",162
+"155","Baltimore City",2006,"MURDER",276
+"156","Baltimore City",2006,"RAPE",139
+"157","Baltimore City",2007,"MURDER",282
+"158","Baltimore City",2007,"RAPE",146
+"159","Baltimore City",2008,"MURDER",234
+"160","Baltimore City",2008,"RAPE",137
+"161","Baltimore City",2009,"MURDER",238
+"162","Baltimore City",2009,"RAPE",158
+"163","Baltimore City",2010,"MURDER",223
+"164","Baltimore City",2010,"RAPE",266
+"165","Baltimore City",2011,"MURDER",197
+"166","Baltimore City",2011,"RAPE",341
+"167","Baltimore City",2012,"MURDER",216
+"168","Baltimore City",2012,"RAPE",317
+"169","Baltimore City",2013,"MURDER",233
+"170","Baltimore City",2013,"RAPE",298
+"171","Baltimore City",2014,"MURDER",211
+"172","Baltimore City",2014,"RAPE",245
+"173","Baltimore City",2015,"MURDER",344
+"174","Baltimore City",2015,"RAPE",287
+"175","Baltimore City",2016,"MURDER",318
+"176","Baltimore City",2016,"RAPE",299
+"177","Baltimore City",2017,"MURDER",342
+"178","Baltimore City",2017,"RAPE",385
+"179","Baltimore City",2018,"MURDER",309
+"180","Baltimore City",2018,"RAPE",367
+"181","Baltimore City",2019,"MURDER",348
+"182","Baltimore City",2019,"RAPE",325
+"183","Baltimore City",2020,"MURDER",334
+"184","Baltimore City",2020,"RAPE",324
+"185","Baltimore County",1975,"MURDER",27
+"186","Baltimore County",1975,"RAPE",153
+"187","Baltimore County",1976,"MURDER",22
+"188","Baltimore County",1976,"RAPE",155
+"189","Baltimore County",1977,"MURDER",26
+"190","Baltimore County",1977,"RAPE",169
+"191","Baltimore County",1978,"MURDER",29
+"192","Baltimore County",1978,"RAPE",185
+"193","Baltimore County",1979,"MURDER",23
+"194","Baltimore County",1979,"RAPE",196
+"195","Baltimore County",1980,"MURDER",26
+"196","Baltimore County",1980,"RAPE",190
+"197","Baltimore County",1981,"MURDER",32
+"198","Baltimore County",1981,"RAPE",192
+"199","Baltimore County",1982,"MURDER",34
+"200","Baltimore County",1982,"RAPE",166
+"201","Baltimore County",1983,"MURDER",34
+"202","Baltimore County",1983,"RAPE",150
+"203","Baltimore County",1984,"MURDER",28
+"204","Baltimore County",1984,"RAPE",176
+"205","Baltimore County",1985,"MURDER",24
+"206","Baltimore County",1985,"RAPE",183
+"207","Baltimore County",1986,"MURDER",31
+"208","Baltimore County",1986,"RAPE",200
+"209","Baltimore County",1987,"MURDER",32
+"210","Baltimore County",1987,"RAPE",207
+"211","Baltimore County",1988,"MURDER",24
+"212","Baltimore County",1988,"RAPE",194
+"213","Baltimore County",1989,"MURDER",33
+"214","Baltimore County",1989,"RAPE",225
+"215","Baltimore County",1990,"MURDER",34
+"216","Baltimore County",1990,"RAPE",262
+"217","Baltimore County",1991,"MURDER",24
+"218","Baltimore County",1991,"RAPE",278
+"219","Baltimore County",1992,"MURDER",43
+"220","Baltimore County",1992,"RAPE",303
+"221","Baltimore County",1993,"MURDER",36
+"222","Baltimore County",1993,"RAPE",283
+"223","Baltimore County",1994,"MURDER",31
+"224","Baltimore County",1994,"RAPE",288
+"225","Baltimore County",1995,"MURDER",38
+"226","Baltimore County",1995,"RAPE",251
+"227","Baltimore County",1996,"MURDER",34
+"228","Baltimore County",1996,"RAPE",276
+"229","Baltimore County",1997,"MURDER",23
+"230","Baltimore County",1997,"RAPE",256
+"231","Baltimore County",1998,"MURDER",20
+"232","Baltimore County",1998,"RAPE",226
+"233","Baltimore County",1999,"MURDER",30
+"234","Baltimore County",1999,"RAPE",190
+"235","Baltimore County",2000,"MURDER",33
+"236","Baltimore County",2000,"RAPE",240
+"237","Baltimore County",2001,"MURDER",31
+"238","Baltimore County",2001,"RAPE",237
+"239","Baltimore County",2002,"MURDER",29
+"240","Baltimore County",2002,"RAPE",236
+"241","Baltimore County",2003,"MURDER",31
+"242","Baltimore County",2003,"RAPE",210
+"243","Baltimore County",2004,"MURDER",29
+"244","Baltimore County",2004,"RAPE",198
+"245","Baltimore County",2005,"MURDER",40
+"246","Baltimore County",2005,"RAPE",178
+"247","Baltimore County",2006,"MURDER",35
+"248","Baltimore County",2006,"RAPE",143
+"249","Baltimore County",2007,"MURDER",36
+"250","Baltimore County",2007,"RAPE",151
+"251","Baltimore County",2008,"MURDER",31
+"252","Baltimore County",2008,"RAPE",152
+"253","Baltimore County",2009,"MURDER",32
+"254","Baltimore County",2009,"RAPE",154
+"255","Baltimore County",2010,"MURDER",20
+"256","Baltimore County",2010,"RAPE",126
+"257","Baltimore County",2011,"MURDER",30
+"258","Baltimore County",2011,"RAPE",147
+"259","Baltimore County",2012,"MURDER",23
+"260","Baltimore County",2012,"RAPE",147
+"261","Baltimore County",2013,"MURDER",20
+"262","Baltimore County",2013,"RAPE",125
+"263","Baltimore County",2014,"MURDER",25
+"264","Baltimore County",2014,"RAPE",100
+"265","Baltimore County",2015,"MURDER",32
+"266","Baltimore County",2015,"RAPE",334
+"267","Baltimore County",2016,"MURDER",35
+"268","Baltimore County",2016,"RAPE",319
+"269","Baltimore County",2017,"MURDER",35
+"270","Baltimore County",2017,"RAPE",326
+"271","Baltimore County",2018,"MURDER",28
+"272","Baltimore County",2018,"RAPE",352
+"273","Baltimore County",2019,"MURDER",50
+"274","Baltimore County",2019,"RAPE",384
+"275","Baltimore County",2020,"MURDER",33
+"276","Baltimore County",2020,"RAPE",348
+"277","Frederick County",1975,"MURDER",4
+"278","Frederick County",1975,"RAPE",12
+"279","Frederick County",1976,"MURDER",8
+"280","Frederick County",1976,"RAPE",8
+"281","Frederick County",1977,"MURDER",4
+"282","Frederick County",1977,"RAPE",18
+"283","Frederick County",1978,"MURDER",4
+"284","Frederick County",1978,"RAPE",17
+"285","Frederick County",1979,"MURDER",4
+"286","Frederick County",1979,"RAPE",20
+"287","Frederick County",1980,"MURDER",2
+"288","Frederick County",1980,"RAPE",12
+"289","Frederick County",1981,"MURDER",4
+"290","Frederick County",1981,"RAPE",15
+"291","Frederick County",1982,"MURDER",1
+"292","Frederick County",1982,"RAPE",24
+"293","Frederick County",1983,"MURDER",5
+"294","Frederick County",1983,"RAPE",14
+"295","Frederick County",1984,"MURDER",6
+"296","Frederick County",1984,"RAPE",20
+"297","Frederick County",1985,"MURDER",3
+"298","Frederick County",1985,"RAPE",23
+"299","Frederick County",1986,"MURDER",2
+"300","Frederick County",1986,"RAPE",29
+"301","Frederick County",1987,"MURDER",1
+"302","Frederick County",1987,"RAPE",32
+"303","Frederick County",1988,"MURDER",6
+"304","Frederick County",1988,"RAPE",25
+"305","Frederick County",1989,"MURDER",5
+"306","Frederick County",1989,"RAPE",33
+"307","Frederick County",1990,"MURDER",5
+"308","Frederick County",1990,"RAPE",35
+"309","Frederick County",1991,"MURDER",2
+"310","Frederick County",1991,"RAPE",39
+"311","Frederick County",1992,"MURDER",3
+"312","Frederick County",1992,"RAPE",57
+"313","Frederick County",1993,"MURDER",4
+"314","Frederick County",1993,"RAPE",48
+"315","Frederick County",1994,"MURDER",10
+"316","Frederick County",1994,"RAPE",39
+"317","Frederick County",1995,"MURDER",4
+"318","Frederick County",1995,"RAPE",40
+"319","Frederick County",1996,"MURDER",4
+"320","Frederick County",1996,"RAPE",42
+"321","Frederick County",1997,"MURDER",2
+"322","Frederick County",1997,"RAPE",46
+"323","Frederick County",1998,"MURDER",1
+"324","Frederick County",1998,"RAPE",48
+"325","Frederick County",1999,"MURDER",1
+"326","Frederick County",1999,"RAPE",49
+"327","Frederick County",2000,"MURDER",6
+"328","Frederick County",2000,"RAPE",51
+"329","Frederick County",2001,"MURDER",1
+"330","Frederick County",2001,"RAPE",49
+"331","Frederick County",2002,"MURDER",5
+"332","Frederick County",2002,"RAPE",50
+"333","Frederick County",2003,"MURDER",5
+"334","Frederick County",2003,"RAPE",42
+"335","Frederick County",2004,"MURDER",1
+"336","Frederick County",2004,"RAPE",39
+"337","Frederick County",2005,"MURDER",1
+"338","Frederick County",2005,"RAPE",30
+"339","Frederick County",2006,"MURDER",9
+"340","Frederick County",2006,"RAPE",35
+"341","Frederick County",2007,"MURDER",7
+"342","Frederick County",2007,"RAPE",35
+"343","Frederick County",2008,"MURDER",4
+"344","Frederick County",2008,"RAPE",23
+"345","Frederick County",2009,"MURDER",9
+"346","Frederick County",2009,"RAPE",33
+"347","Frederick County",2010,"MURDER",3
+"348","Frederick County",2010,"RAPE",34
+"349","Frederick County",2011,"MURDER",3
+"350","Frederick County",2011,"RAPE",31
+"351","Frederick County",2012,"MURDER",1
+"352","Frederick County",2012,"RAPE",50
+"353","Frederick County",2013,"MURDER",5
+"354","Frederick County",2013,"RAPE",18
+"355","Frederick County",2014,"MURDER",4
+"356","Frederick County",2014,"RAPE",41
+"357","Frederick County",2015,"MURDER",7
+"358","Frederick County",2015,"RAPE",34
+"359","Frederick County",2016,"MURDER",2
+"360","Frederick County",2016,"RAPE",39
+"361","Frederick County",2017,"MURDER",5
+"362","Frederick County",2017,"RAPE",47
+"363","Frederick County",2018,"MURDER",3
+"364","Frederick County",2018,"RAPE",57
+"365","Frederick County",2019,"MURDER",3
+"366","Frederick County",2019,"RAPE",61
+"367","Frederick County",2020,"MURDER",9
+"368","Frederick County",2020,"RAPE",41
+"369","Montgomery County",1975,"MURDER",21
+"370","Montgomery County",1975,"RAPE",92
+"371","Montgomery County",1976,"MURDER",28
+"372","Montgomery County",1976,"RAPE",96
+"373","Montgomery County",1977,"MURDER",15
+"374","Montgomery County",1977,"RAPE",120
+"375","Montgomery County",1978,"MURDER",12
+"376","Montgomery County",1978,"RAPE",122
+"377","Montgomery County",1979,"MURDER",17
+"378","Montgomery County",1979,"RAPE",137
+"379","Montgomery County",1980,"MURDER",17
+"380","Montgomery County",1980,"RAPE",151
+"381","Montgomery County",1981,"MURDER",13
+"382","Montgomery County",1981,"RAPE",167
+"383","Montgomery County",1982,"MURDER",20
+"384","Montgomery County",1982,"RAPE",173
+"385","Montgomery County",1983,"MURDER",16
+"386","Montgomery County",1983,"RAPE",132
+"387","Montgomery County",1984,"MURDER",14
+"388","Montgomery County",1984,"RAPE",146
+"389","Montgomery County",1985,"MURDER",12
+"390","Montgomery County",1985,"RAPE",127
+"391","Montgomery County",1986,"MURDER",8
+"392","Montgomery County",1986,"RAPE",145
+"393","Montgomery County",1987,"MURDER",17
+"394","Montgomery County",1987,"RAPE",173
+"395","Montgomery County",1988,"MURDER",19
+"396","Montgomery County",1988,"RAPE",184
+"397","Montgomery County",1989,"MURDER",21
+"398","Montgomery County",1989,"RAPE",200
+"399","Montgomery County",1990,"MURDER",25
+"400","Montgomery County",1990,"RAPE",204
+"401","Montgomery County",1991,"MURDER",26
+"402","Montgomery County",1991,"RAPE",220
+"403","Montgomery County",1992,"MURDER",21
+"404","Montgomery County",1992,"RAPE",189
+"405","Montgomery County",1993,"MURDER",30
+"406","Montgomery County",1993,"RAPE",212
+"407","Montgomery County",1994,"MURDER",34
+"408","Montgomery County",1994,"RAPE",199
+"409","Montgomery County",1995,"MURDER",21
+"410","Montgomery County",1995,"RAPE",222
+"411","Montgomery County",1996,"MURDER",13
+"412","Montgomery County",1996,"RAPE",160
+"413","Montgomery County",1997,"MURDER",23
+"414","Montgomery County",1997,"RAPE",189
+"415","Montgomery County",1998,"MURDER",13
+"416","Montgomery County",1998,"RAPE",167
+"417","Montgomery County",1999,"MURDER",13
+"418","Montgomery County",1999,"RAPE",136
+"419","Montgomery County",2000,"MURDER",12
+"420","Montgomery County",2000,"RAPE",177
+"421","Montgomery County",2001,"MURDER",19
+"422","Montgomery County",2001,"RAPE",146
+"423","Montgomery County",2002,"MURDER",32
+"424","Montgomery County",2002,"RAPE",145
+"425","Montgomery County",2003,"MURDER",23
+"426","Montgomery County",2003,"RAPE",148
+"427","Montgomery County",2004,"MURDER",18
+"428","Montgomery County",2004,"RAPE",149
+"429","Montgomery County",2005,"MURDER",21
+"430","Montgomery County",2005,"RAPE",157
+"431","Montgomery County",2006,"MURDER",19
+"432","Montgomery County",2006,"RAPE",145
+"433","Montgomery County",2007,"MURDER",20
+"434","Montgomery County",2007,"RAPE",133
+"435","Montgomery County",2008,"MURDER",21
+"436","Montgomery County",2008,"RAPE",136
+"437","Montgomery County",2009,"MURDER",13
+"438","Montgomery County",2009,"RAPE",130
+"439","Montgomery County",2010,"MURDER",16
+"440","Montgomery County",2010,"RAPE",123
+"441","Montgomery County",2011,"MURDER",15
+"442","Montgomery County",2011,"RAPE",115
+"443","Montgomery County",2012,"MURDER",14
+"444","Montgomery County",2012,"RAPE",106
+"445","Montgomery County",2013,"MURDER",9
+"446","Montgomery County",2013,"RAPE",135
+"447","Montgomery County",2014,"MURDER",18
+"448","Montgomery County",2014,"RAPE",125
+"449","Montgomery County",2015,"MURDER",29
+"450","Montgomery County",2015,"RAPE",275
+"451","Montgomery County",2016,"MURDER",15
+"452","Montgomery County",2016,"RAPE",338
+"453","Montgomery County",2017,"MURDER",26
+"454","Montgomery County",2017,"RAPE",319
+"455","Montgomery County",2018,"MURDER",20
+"456","Montgomery County",2018,"RAPE",421
+"457","Montgomery County",2019,"MURDER",14
+"458","Montgomery County",2019,"RAPE",388
+"459","Montgomery County",2020,"MURDER",18
+"460","Montgomery County",2020,"RAPE",370
+"461","Prince George's County",1975,"MURDER",52
+"462","Prince George's County",1975,"RAPE",288
+"463","Prince George's County",1976,"MURDER",38
+"464","Prince George's County",1976,"RAPE",308
+"465","Prince George's County",1977,"MURDER",54
+"466","Prince George's County",1977,"RAPE",297
+"467","Prince George's County",1978,"MURDER",37
+"468","Prince George's County",1978,"RAPE",349
+"469","Prince George's County",1979,"MURDER",51
+"470","Prince George's County",1979,"RAPE",393
+"471","Prince George's County",1980,"MURDER",56
+"472","Prince George's County",1980,"RAPE",427
+"473","Prince George's County",1981,"MURDER",61
+"474","Prince George's County",1981,"RAPE",410
+"475","Prince George's County",1982,"MURDER",76
+"476","Prince George's County",1982,"RAPE",375
+"477","Prince George's County",1983,"MURDER",58
+"478","Prince George's County",1983,"RAPE",341
+"479","Prince George's County",1984,"MURDER",42
+"480","Prince George's County",1984,"RAPE",397
+"481","Prince George's County",1985,"MURDER",47
+"482","Prince George's County",1985,"RAPE",366
+"483","Prince George's County",1986,"MURDER",52
+"484","Prince George's County",1986,"RAPE",429
+"485","Prince George's County",1987,"MURDER",94
+"486","Prince George's County",1987,"RAPE",459
+"487","Prince George's County",1988,"MURDER",101
+"488","Prince George's County",1988,"RAPE",420
+"489","Prince George's County",1989,"MURDER",122
+"490","Prince George's County",1989,"RAPE",302
+"491","Prince George's County",1990,"MURDER",112
+"492","Prince George's County",1990,"RAPE",493
+"493","Prince George's County",1991,"MURDER",147
+"494","Prince George's County",1991,"RAPE",501
+"495","Prince George's County",1992,"MURDER",134
+"496","Prince George's County",1992,"RAPE",452
+"497","Prince George's County",1993,"MURDER",141
+"498","Prince George's County",1993,"RAPE",459
+"499","Prince George's County",1994,"MURDER",127
+"500","Prince George's County",1994,"RAPE",413
+"501","Prince George's County",1995,"MURDER",137
+"502","Prince George's County",1995,"RAPE",405
+"503","Prince George's County",1996,"MURDER",142
+"504","Prince George's County",1996,"RAPE",344
+"505","Prince George's County",1997,"MURDER",83
+"506","Prince George's County",1997,"RAPE",347
+"507","Prince George's County",1998,"MURDER",107
+"508","Prince George's County",1998,"RAPE",305
+"509","Prince George's County",1999,"MURDER",95
+"510","Prince George's County",1999,"RAPE",265
+"511","Prince George's County",2000,"MURDER",72
+"512","Prince George's County",2000,"RAPE",228
+"513","Prince George's County",2001,"MURDER",109
+"514","Prince George's County",2001,"RAPE",255
+"515","Prince George's County",2002,"MURDER",141
+"516","Prince George's County",2002,"RAPE",274
+"517","Prince George's County",2003,"MURDER",135
+"518","Prince George's County",2003,"RAPE",287
+"519","Prince George's County",2004,"MURDER",146
+"520","Prince George's County",2004,"RAPE",293
+"521","Prince George's County",2005,"MURDER",164
+"522","Prince George's County",2005,"RAPE",305
+"523","Prince George's County",2006,"MURDER",130
+"524","Prince George's County",2006,"RAPE",287
+"525","Prince George's County",2007,"MURDER",141
+"526","Prince George's County",2007,"RAPE",267
+"527","Prince George's County",2008,"MURDER",122
+"528","Prince George's County",2008,"RAPE",250
+"529","Prince George's County",2009,"MURDER",96
+"530","Prince George's County",2009,"RAPE",221
+"531","Prince George's County",2010,"MURDER",91
+"532","Prince George's County",2010,"RAPE",204
+"533","Prince George's County",2011,"MURDER",95
+"534","Prince George's County",2011,"RAPE",183
+"535","Prince George's County",2012,"MURDER",63
+"536","Prince George's County",2012,"RAPE",173
+"537","Prince George's County",2013,"MURDER",56
+"538","Prince George's County",2013,"RAPE",176
+"539","Prince George's County",2014,"MURDER",56
+"540","Prince George's County",2014,"RAPE",206
+"541","Prince George's County",2015,"MURDER",78
+"542","Prince George's County",2015,"RAPE",278
+"543","Prince George's County",2016,"MURDER",88
+"544","Prince George's County",2016,"RAPE",277
+"545","Prince George's County",2017,"MURDER",81
+"546","Prince George's County",2017,"RAPE",130
+"547","Prince George's County",2018,"MURDER",61
+"548","Prince George's County",2018,"RAPE",262
+"549","Prince George's County",2019,"MURDER",75
+"550","Prince George's County",2019,"RAPE",201
+"551","Prince George's County",2020,"MURDER",93
+"552","Prince George's County",2020,"RAPE",250
