@@ -32,7 +32,7 @@ library(tidyverse)
 library(ggplot2)
 library(kableExtra)
 
-mont_crime<-read.csv("C:\\Users\\catie\\Downloads\\Crime.csv")
+mont_crime <- read.csv("C:\\Users\\catie\\Downloads\\Crime.csv")
 ```
 
 ## Secondary Dataset
@@ -45,7 +45,7 @@ This dataset is important for my guiding questions because it will help compare 
 #| echo: false
 #| warning: false
 
-md_crime<-read.csv("C:\\Users\\catie\\Downloads\\Violent_Crime___Property_Crime_by_County__1975_to_Present_20250812.csv")
+md_crime <- read.csv("C:\\Users\\catie\\Downloads\\Violent_Crime___Property_Crime_by_County__1975_to_Present_20250812.csv")
 ```
 
 ## Data Wrangling
@@ -58,40 +58,60 @@ I first separate the data into 2 different sets that I would like to look at, th
 
 I only want the start date and time, the specific crime, and the Police District it happened in. I have to convert the start date and time into a POSIXct date time so that I can use it later and I mutate the column to do that. Then I create new columns that store only the year and the month and get rid of the original Start_Date_Time column. Next I filter out all the minor offenses underneath "All Other Offenses" and all the unfinished Police District information, usually written as "OTHER" or left blank.
 
-For the first dataframe that looks at all crimes over the months and years, named mont_crime_year_district. To get the summary data I need for graphing, I group it by Year, Month, and Police.District, and then summarize it by count. This gets me my tidied dataframe needed for graphing. For the second dataframe, named mont_year_bycrime, that looks at 9 of the top crimes by year, I first filter the data to only have those top 9 crimes, and then I group by year and crime, and summarize again by count. Now this dataframe is also ready to be plotted. Below are the first 5 lines of each dataframe.
+For the first dataframe that looks at all crimes over the months and years, named mont_crime_year_district. To get the summary data I need for graphing, I group it by Year, Month, and Police.District, and then summarize it by count. This gets me my tidied dataframe needed for graphing. For the second dataframe, named mont_year_bycrime, that looks at 9 of the top crimes by year, I first filter the data to only have those top 9 crimes, and then I group by year and crime, and summarize again by count. Now this dataframe is also ready to be plotted.
+
+Below are the first 5 lines of each dataframe.
 
 ```{r}
 #| echo: false
 #| warning: false
-mont_crime<-mont_crime%>%select(Start_Date_Time,Crime.Name2,Police.District.Name)
+mont_crime <- mont_crime%>%
+  select(Start_Date_Time,Crime.Name2,Police.District.Name)
 
 
-mont_crime_year_district<-mont_crime%>%mutate(Start_Date_Time=as.POSIXct(Start_Date_Time,format = "%m/%d/%Y %H:%M:%S %p"))%>%
-  mutate(Year=format(Start_Date_Time,format='%Y'))%>%mutate(Month=format(Start_Date_Time,format='%m'))%>%
-  select(-Start_Date_Time)%>%filter(Crime.Name2!='All Other Offenses')%>%
-  filter(Police.District.Name!='OTHER')%>%filter(Police.District.Name!='')%>%
-  group_by(Year,Month,Police.District.Name)%>%summarise(num=n())%>%arrange(desc(num))
-colnames(mont_crime_year_district)<-c('Year','Month','Police District','Count')
-mont_crime_year_district<-na.omit(mont_crime_year_district)
+mont_crime_year_district <- mont_crime %>%
+  mutate(Start_Date_Time = as.POSIXct(Start_Date_Time, format = "%m/%d/%Y %H:%M:%S %p")) %>%
+  mutate(Year = format(Start_Date_Time, format = '%Y')) %>%
+  mutate(Month = format(Start_Date_Time, format='%m')) %>%
+  select(-Start_Date_Time) %>%
+  filter(Crime.Name2 != 'All Other Offenses') %>%
+  filter(Police.District.Name != 'OTHER') %>%
+  filter(Police.District.Name != '') %>%
+  group_by(Year, Month, Police.District.Name) %>%
+  summarise(num=n()) %>%
+  arrange(desc(num))
+
+colnames(mont_crime_year_district) <- c('Year', 'Month', 'Police District','Count')
+mont_crime_year_district <- na.omit(mont_crime_year_district)
 
 
 
-top9_crimes<-(mont_crime%>%group_by(Crime.Name2)%>%summarise(count=n())%>%filter(Crime.Name2!='All Other Offenses')%>%arrange(desc(count)))$Crime.Name2[1:10]
-mont_year_bycrime<-mont_crime%>%mutate(Start_Date_Time=as.POSIXct(Start_Date_Time,format = "%m/%d/%Y %H:%M:%S %p"))%>%
-  mutate(Year=format(Start_Date_Time,format='%Y'))%>%mutate(Month=format(Start_Date_Time,format='%m'))%>%
-  select(-Start_Date_Time)%>%filter(Crime.Name2%in%top9_crimes)%>%
-  filter(Police.District.Name!='OTHER')%>%filter(Police.District.Name!='')%>%
-  group_by(Year,Crime.Name2)%>%summarise(num=n())%>%arrange(desc(num))
-mont_year_bycrime<-na.omit(mont_year_bycrime)
-colnames(mont_year_bycrime)<-c('Year','Crime','Count')
+top9_crimes <- (mont_crime %>%
+                  group_by(Crime.Name2) %>%
+                  summarise(count = n()) %>%
+                  filter(Crime.Name2 != 'All Other Offenses') %>%
+                  arrange(desc(count)))$Crime.Name2[1:10]
+mont_year_bycrime <- mont_crime %>%
+  mutate(Start_Date_Time = as.POSIXct(Start_Date_Time,format = "%m/%d/%Y %H:%M:%S %p")) %>%
+  mutate(Year = format(Start_Date_Time, format = '%Y')) %>%
+  mutate(Month = format(Start_Date_Time, format = '%m')) %>%
+  select(-Start_Date_Time) %>% 
+  filter(Crime.Name2 %in% top9_crimes) %>%
+  filter(Police.District.Name != 'OTHER') %>%
+  filter(Police.District.Name != '') %>%
+  group_by(Year, Crime.Name2) %>%
+  summarise(num = n()) %>%
+  arrange(desc(num))
+mont_year_bycrime <- na.omit(mont_year_bycrime)
+colnames(mont_year_bycrime) <- c('Year', 'Crime', 'Count')
 
-output_mont_cyd<-mont_crime_year_district[1:5,]
+output_mont_cyd <- mont_crime_year_district[1:5,]
 output_mont_cyd %>%
   kbl(caption = "Montgomery County Crime by Police District/Year") %>%
   kable_classic(full_width = F, html_font = "Cambria")
 
-output_mont_ybc<-mont_year_bycrime[1:5,]
-output_mont_ybc%>%
+output_mont_ybc <- mont_year_bycrime[1:5,]
+output_mont_ybc %>%
   kbl(caption = "Montgomery County Top Crimes by Year") %>%
   kable_classic(full_width = F, html_font = "Cambria")
 
@@ -99,31 +119,40 @@ output_mont_ybc%>%
 
 For my secondary dataset, it has the total number of the crimes it looks at as individual columns, so I need to pivot the dataframe to be longer and make a new column that has what crime was committed.
 
-After exploratory data analysis I discovered that the number of crimes for murder and rape where much lower than the others and observing the trend for them would be difficult if plotted on the same graph, so I separated them into 2 dataframes for plotting. The first dataframe is md_crime_high for high volume crimes. These crimes are Robbery, Aggravated Assault, Breaking & Entering, and Motor Vehicle Theft. The second dataframe is md_crime_low for low volume crimes, Murder and Rape. 
+After exploratory data analysis I discovered that the number of crimes for murder and rape where much lower than the others and observing the trend for them would be difficult if plotted on the same graph, so I separated them into 2 dataframes for plotting. The first dataframe is md_crime_high for high volume crimes. These crimes are Robbery, Aggravated Assault, Breaking & Entering, and Motor Vehicle Theft. The second dataframe is md_crime_low for low volume crimes, Murder and Rape.
 
-After using select to separate the data
+After using filter to get only the counties needed and select to separate the data, I pivoted each dataframe so that instead of multiple columns for each crime, crime was one column with a value and each year and county had multiple rows, making each crime a case rather than each year and county. Now after some cleaning up of the column names the 2 dataframes are complete and ready for plotting. 
+
+Below are the first 5 lines of the new dataframes. 
 
 ```{r}
 #| echo: false
 #| warning: false
 
-md_crime<-md_crime%>%filter(JURISDICTION%in%c('Montgomery County','Baltimore City','Anne Arundel County',"Prince George's County","Baltimore County","Frederick County"))
+md_crime <- md_crime %>%
+  filter(JURISDICTION %in% c("Montgomery County", "Baltimore City", "Anne Arundel County", "Prince George's County", "Baltimore County", "Frederick County"))
 
-md_crime_high<-md_crime%>%select(JURISDICTION,YEAR,ROBBERY,AGG..ASSAULT,B...E,M.V.THEFT)
-md_crime_low<-md_crime%>%select(JURISDICTION,YEAR,RAPE,MURDER)
-md_crime_high<-md_crime_high%>%pivot_longer(cols=c(ROBBERY,AGG..ASSAULT,B...E,M.V.THEFT),names_to = 'CRIME')
-md_crime_high$CRIME[md_crime_high$CRIME=='AGG..ASSAULT']='AGGRAVATED ASSAULT'
-md_crime_high$CRIME[md_crime_high$CRIME=='B...E']='BREAKING & ENTERING'
-md_crime_high$CRIME[md_crime_high$CRIME=='M.V.THEFT']='MOTOR VEHICLE THEFT'
-md_crime_low<-md_crime_low%>%pivot_longer(cols=c(MURDER,RAPE),names_to = 'CRIME')
+md_crime_high <- md_crime %>%
+  select(JURISDICTION, YEAR, ROBBERY, AGG..ASSAULT, B...E, M.V.THEFT)
+md_crime_low <- md_crime %>%
+  select(JURISDICTION, YEAR, RAPE, MURDER)
+md_crime_high <- md_crime_high %>%
+  pivot_longer(cols = c(ROBBERY, AGG..ASSAULT, B...E, M.V.THEFT), names_to = 'CRIME')
+
+md_crime_high$CRIME[md_crime_high$CRIME == 'AGG..ASSAULT'] = 'AGGRAVATED ASSAULT'
+md_crime_high$CRIME[md_crime_high$CRIME == 'B...E'] = 'BREAKING & ENTERING'
+md_crime_high$CRIME[md_crime_high$CRIME == 'M.V.THEFT'] = 'MOTOR VEHICLE THEFT'
+
+md_crime_low <- md_crime_low %>% 
+  pivot_longer(cols = c(MURDER, RAPE),names_to = 'CRIME')
 colnames(md_crime_high)<-c('JURISDICTION','YEAR','CRIME','NUMBER')
 colnames(md_crime_low)<-c('JURISDICTION','YEAR','CRIME','NUMBER')
 
-md_crime_high[1:5,]%>%
+md_crime_high[1:5,] %>%
   kbl(caption = "Maryland Crime Numbers by Year for Popular Counties: High Number Crimes") %>%
   kable_classic(full_width = F, html_font = "Cambria")
 
-md_crime_low[1:5,]%>%
+md_crime_low[1:5,] %>%
   kbl(caption = "Maryland Crime Numbers by Year for Popular Counties: Low Number Crimes") %>%
   kable_classic(full_width = F, html_font = "Cambria")
 ```
@@ -133,16 +162,43 @@ md_crime_low[1:5,]%>%
 ```{r, fig.width=8, fig.height=6}
 #| echo: false 
 #| warning: false
-p_year_district<-ggplot(data=mont_crime_year_district,mapping = aes(x=Month,y=Count,colour = Year))+geom_point()+facet_wrap(vars(`Police District`))+theme_bw()+theme(axis.text.x = element_text(angle=60,hjust=1))+labs(title='Montgomery County Total Crimes per Month by Year')
+p_year_district <- ggplot(data = mont_crime_year_district, mapping = aes(x = Month, y = Count, colour = Year)) +
+  geom_point() +
+  facet_wrap(vars(`Police District`)) +
+  theme_bw() +
+  theme(axis.text.x = element_text(angle = 60, hjust=0.5)) +
+  labs(title='Montgomery County Total Crimes per Month by Year')
+
 p_year_district
 
-p_year_crime<-ggplot(data=mont_year_bycrime,mapping = aes(x=Year,y=Count))+geom_point(mapping = aes(x=Year,y=Count))+facet_wrap(vars(Crime))+theme_bw()+theme(axis.text.x = element_text(angle=60,hjust=1))+labs(title='Montgomery County Top Crimes by Year')
+p_year_crime <- ggplot(data = mont_year_bycrime, mapping = aes(x = Year, y = Count)) +
+  geom_point(mapping = aes(x = Year, y = Count)) +
+  facet_wrap(vars(Crime)) +
+  theme_bw() + 
+  theme(axis.text.x = element_text(angle = 60, hjust = 1)) +
+  labs(title = 'Montgomery County Top Crimes by Year')
+
 p_year_crime
 
-high_crime<-md_crime_high%>%ggplot(mapping = aes(x=YEAR,y=NUMBER,colour = CRIME))+facet_wrap(vars(JURISDICTION))+geom_line()+geom_point()+
-  theme_bw()+ylab('Number')+xlab("Year")+labs(title = "Number of other Crime Incidents in Prominent Maryland Counties 1975-2022",colour='Crime')
-low_crime<-md_crime_low%>%ggplot(mapping = aes(x=YEAR,y=NUMBER,colour = CRIME))+facet_wrap(vars(JURISDICTION))+geom_line()+geom_point()+
-  theme_bw()+ylab('Number')+xlab("Year")+labs(title = "Number of Murder and Rape Incidents in Prominent Maryland Counties 1975-2022",colour='Crime')
+high_crime <- md_crime_high %>%
+  ggplot(mapping = aes(x = YEAR, y = NUMBER, colour = CRIME)) +
+  facet_wrap(vars(JURISDICTION)) +
+  geom_line() +
+  geom_point() +
+  theme_bw() +
+  ylab('Number') + 
+  xlab("Year") +
+  labs(title = "Number of other Crime Incidents in Prominent Maryland Counties 1975-2022", colour = 'Crime')
+
+low_crime <- md_crime_low %>%
+  ggplot(mapping = aes(x = YEAR, y = NUMBER, colour = CRIME)) +
+  facet_wrap(vars(JURISDICTION)) +
+  geom_line() +
+  geom_point() +
+  theme_bw() +
+  ylab('Number') +
+  xlab("Year") +
+  labs(title = "Number of Murder and Rape Incidents in Prominent Maryland Counties 1975-2022", colour = 'Crime')
 
 high_crime
 low_crime
